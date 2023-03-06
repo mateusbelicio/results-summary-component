@@ -10,7 +10,7 @@ const ScoreStyle = styled.li`
 
   padding: 1.125rem 1rem;
   background-image: var(--gradient-white), linear-gradient(currentColor, currentColor);
-  color: ${(props) => `var(--clr-${props.color})`};
+  color: ${(props) => `var(--clr-${props.dataColor})`};
   border-radius: 0.75rem;
   overflow: hidden;
 
@@ -37,7 +37,7 @@ const ScoreStyle = styled.li`
 
 export const Score = ({ icon, category, value, color }) => {
   return (
-    <ScoreStyle color={color}>
+    <ScoreStyle dataColor={color}>
       <svg className='score__icon'>
         <use href={`${sprites}#${icon}`} />
       </svg>
