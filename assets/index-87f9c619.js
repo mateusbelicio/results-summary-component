@@ -165,7 +165,10 @@ Error generating stack: `+o.message+`
     grid-template-columns:
       1fr [center-start] repeat(2, minmax(0, calc(var(--max-width) / 2)))
       [center-end] 1fr;
-    grid-template-rows: 1fr [center-start] minmax(0, var(--max-height)) [center-end] 1fr;
+    grid-template-rows: minmax(17.75rem, 1fr) [center-start] minmax(0, var(--max-height)) [center-end] minmax(
+        17.75rem,
+        1fr
+      );
 
     & :first-child {
       grid-column: 2;
@@ -277,7 +280,7 @@ Error generating stack: `+o.message+`
 
   padding: 1.125rem 1rem;
   background-image: var(--gradient-white), linear-gradient(currentColor, currentColor);
-  color: ${e=>`var(--clr-${e.color})`};
+  color: ${e=>`var(--clr-${e.dataColor})`};
   border-radius: 0.75rem;
   overflow: hidden;
 
@@ -300,7 +303,7 @@ Error generating stack: `+o.message+`
       opacity: 0.5;
     }
   }
-`,jh=({icon:e,category:t,value:n,color:r})=>Ft(Dh,{color:r,children:[ae("svg",{className:"score__icon",children:ae("use",{href:`${Mh}#${e}`})}),ae("p",{className:"score__category",children:t}),Ft("p",{className:"score__value",children:[n," ",ae("span",{children:"/ 100"})]})]}),Uh=Qn.button`
+`,jh=({icon:e,category:t,value:n,color:r})=>Ft(Dh,{dataColor:r,children:[ae("svg",{className:"score__icon",children:ae("use",{href:`${Mh}#${e}`})}),ae("p",{className:"score__category",children:t}),Ft("p",{className:"score__value",children:[n," ",ae("span",{children:"/ 100"})]})]}),Uh=Qn.button`
   background-image: linear-gradient(var(--clr-neutral-500), var(--clr-neutral-500));
   color: var(--clr-neutral-100);
   border: none;
