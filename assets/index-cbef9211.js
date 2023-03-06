@@ -165,10 +165,7 @@ Error generating stack: `+o.message+`
     grid-template-columns:
       1fr [center-start] repeat(2, minmax(0, calc(var(--max-width) / 2)))
       [center-end] 1fr;
-    grid-template-rows: minmax(17.75rem, 1fr) [center-start] minmax(0, var(--max-height)) [center-end] minmax(
-        17.75rem,
-        1fr
-      );
+    grid-template-rows: 1fr [center-start] minmax(0, var(--max-height)) [center-end] 1fr;
 
     & :first-child {
       grid-column: 2;
